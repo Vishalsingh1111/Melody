@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,169 +12,147 @@
 
 
 <style>
-
-    /* login style */
-    header{
+    /* SignUP style */
+    header {
+        display: flex;
+        flex-direction: column;
         height: 100%;
         padding: 5vmin 7vmin;
-        
-    }
-    header #foot{ 
-        margin-top: 2vmin;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        font-weight: 100;
-    }
-    header #foot p1{
-        margin-right:4vmin;  
-    }
-    header #foot p2{
-        cursor: pointer;
-       
-    }
-    header #foot a{
-        text-decoration: none;
-        color: #fff;
-    }
-    header #foot a p2:hover{
-    color: aqua;
-    }
-    
-    header .left_bx1, .right_bx1{
-        position: relative;
-        width: 60%;
-        height: 96%;
         background-color: #0c302b9e;
-        display: flex;
-        align-items: center;
-        justify-content:center;
     }
-    header .left_bx1{
-        width: 40%;
-        background: #fff;
-        box-shadow: 15px 0px 12px #090f1f;
+
+    .error {
+        color: #dd9116;
+        font-size: 3vmin;
+        text-align: center;
     }
-    header .left_bx1 .content{
-    font-size: 3vmin;
-    width: 75%;
-    height: auto;
-    border: 1px solid #090f1f;
-    padding: 5.5vmin 4vmin;
-    padding-top: 1vmin;
-    background: #fff;
-    text-align: center;
-    color: #456174;
+
+    header .left_bx1:hover {
+        border-radius: 14px;
+        box-shadow: #dd9116aa 0 0 90px 33px;
     }
-    
-    header .left_bx1 .content .card{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 3vmin;
+
+    header .left_bx1 {
+        position: relative;
+        width: 68%;
+        background-color: #dd9116;
+        margin: auto;
+        border-radius: 2vmin;
     }
-    
-    header .left_bx1 .content .card label{
-    font-size: 2.4vmin;
+
+    header h3 {
+        font-size: 7vmin;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 auto;
+        padding: 3vmin 0 1vmin 0;
     }
-    header .left_bx1 .content .card input{
-       width: 100%;
-       padding: 0.6vmin 1vmin;
-       border: 1px solid rgb(154, 154, 154);
-       background: rgb(238, 238, 238);
-       margin-top: 0.7vmin; 
+
+    header .left_bx1 .content .card {
+        width: 60%;
+        padding: 1vmin;
+        margin: 0 auto 0 auto;
     }
-    header .left_bx1 .content .submit{
+
+    header .left_bx1 .content .card label {
+        font-size: 2.4vmin;
+        padding-left: 1vmin;
+    }
+
+    header .left_bx1 .content .card input {
+        width: 100%;
+        font-size: 2vmin;
+        padding: 1vmin 2vmin;
+        border: 1px solid rgb(154, 154, 154);
+        background: rgb(238, 238, 238);
+        margin-top: 0.7vmin;
+
+    }
+
+    header .left_bx1 .content .submit .submit {
+        text-align: center;
+        width: 100%;
+    }
+
+    header .left_bx1 .content .submit {
+        font-size: 2vmin;
+        margin: 3vmin auto 0 auto;
+        border: none;
         font-weight: 530;
-        margin-top:1vmin;
+        margin-top: 1vmin;
         padding: 0.6vmin 2vmin;
         background: #456174;
         color: #fff;
-        width: 100%;
+        width: 58%;
+
     }
-    header .left_bx1 .content .check{
-        display: flex;
-        align-items: center;
-        margin-top:5vmin;
+
+    header .left_bx1 .content .check {
+        width: 58%;
+        margin: 3vmin auto 0 auto;
     }
-    header .left_bx1 .content .check span{
+
+    header .left_bx1 .content .check span {
         margin-left: 0.6vmin;
         font-size: 2vmin;
     }
-    header .left_bx1 .content p{
-        margin-top: 8vmin;
-        font-size:2vmin;
-        margin-bottom: 1vmin;
+
+    header .left_bx1 .content p {
+        font-size: 2vmin;
+        text-align: center;
+        padding: 1vmin 0 4vmin 0;
+        margin: 1vmin auto 1vmin auto;
     }
-    header .left_bx1 .content p a{
+
+    header .left_bx1 .content p a {
         text-decoration: none;
+        color: black;
     }
-    header .right_bx1 img{
-     border-radius: 3%;
-     box-shadow: 13px 45px 50px #0d0c0c;
-    }
-    header .right_bx1 h3{
-    position: absolute;
-    background: #dd9116;
-    color: #090f1f;
-    left: -42vmin;
-    bottom:10vmin;
-    padding: 5px 14px;
-    border-radius: 1vmin;
-    font-size: 1.6vmin;
-    display: none;
-    }
-    
-    
-    
-    </style>
+</style>
 
 
 
 
 <body>
     <header>
-       <div class="left_bx1">
-        <div class="content">
-            <form method="post">
-                <h3>SignUp</h3>
-                <div class="card">
-                    <label for="name">Name</label>
-                    <input type="text" name="user_name" placeholder="Enter Username" required>
-                </div>
-                <div class="card">
-                    <label for="email">Email</label>
-                    <input type="email" name="user_email" placeholder="Enter Email" required>
-                </div>
-                <div class="card">
-                    <label for="password">Password</label>
-                    <input type="password" name="user_password" placeholder="Enter Password" required>
-                </div>
-                <div class="card">
-                    <label for="re-password">Verify Password</label>
-                    <input type="password" name="user_re_password" placeholder="Re-enter Your Password" required>
-                </div>
-                <div class="check">
-                    <input type="checkbox" name="" id=""><span>Remember Me </span>
-                </div>
-                <input type="submit" value="SignUp" class="submit">
-                
-                <p>Already a user?<a href="login.html"> Login</a> </p>
-            </form>
+        <div class="left_bx1">
+            <div class="content">
+                <form method="post">
+                    <h3>User's Registration Page</h3>
+                    <div class="card">
+                        <label for="name">Name</label>
+                        <input type="text" name="user_name" placeholder="Enter Username" required>
+                    </div>
+                    <div class="card">
+                        <label for="email">Email</label>
+                        <input type="email" name="user_email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="card">
+                        <label for="password">Password</label>
+                        <input type="password" name="user_password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="card">
+                        <label for="re-password">Verify Password</label>
+                        <input type="password" name="user_re_password" placeholder="Re-enter Your Password" required>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="" id=""><span>Remember Me </span>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Register" class="submit">
+                    </div>
+
+
+                    <p>Already a user?<a href="login.html"> Login</a> </p>
+                </form>
+            </div>
         </div>
-       </div>
-       <div class="right_bx1">
-        <img src="images/Screenshot 2023-01-27 at 2.31.43 PM.png" height="83%" alt="">
-        <h3>Incorrect Password</h3>
-       </div>
-       <div id="foot">
-        <div>
-       <p1> © Copyright 2023 Melody</p1></div>
-       <div>
-       <a href="https://linktr.ee/vishal215"><p2>Contact Me</p2></a></div>
-    </div>
+        <div class="error">
+            <!-- <p>Incorrect Password</p> -->
+        </div>
+        </div>
+        </div>
     </header>
 </body>
+
 </html>
