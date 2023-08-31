@@ -1214,4 +1214,30 @@ header .song_side .popular_artists .item li img {
 }
 
 
+/* *----------------- footer------------------- */
+.footer {
+    position: relative;
+    background-color: #dd9116;
+}
 
+.footer .credit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vmin 0;
+    margin: auto;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.footer .credit .social-icon a i {
+    font-size: 2vmin;
+    margin: 0 0.5vmin;
+    cursor: pointer;
+    color: #121213;
+}
+
+.footer .credit span a {
+    color: var(--main-color);
+    text-decoration: none;
+}
